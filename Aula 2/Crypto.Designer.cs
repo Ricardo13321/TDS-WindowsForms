@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             txtPalavra = new TextBox();
-            label1 = new Label();
+            lblDigitePalavra = new Label();
             btnJogar = new Button();
             cu = new PictureBox();
-            label2 = new Label();
+            lblTentativas = new Label();
             txtTentativa = new TextBox();
             lblPalavraCripto = new Label();
-            lblPalavraAcertos = new Label();
             lblAcertouErrou = new Label();
             btnVerificar = new Button();
             txtLetra = new TextBox();
             btnFechar = new Button();
-            lbLetra = new Label();
             pictureBox1 = new PictureBox();
             picheart1 = new PictureBox();
             picheart2 = new PictureBox();
@@ -52,6 +50,7 @@
             picheart8 = new PictureBox();
             picheart9 = new PictureBox();
             picheart10 = new PictureBox();
+            lblPalavraAcertos = new Label();
             ((System.ComponentModel.ISupportInitialize)cu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picheart1).BeginInit();
@@ -68,34 +67,36 @@
             // 
             // txtPalavra
             // 
-            txtPalavra.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtPalavra.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtPalavra.ForeColor = Color.Black;
             txtPalavra.Location = new Point(25, 45);
             txtPalavra.Name = "txtPalavra";
-            txtPalavra.Size = new Size(246, 27);
+            txtPalavra.PlaceholderText = "Palavra";
+            txtPalavra.Size = new Size(246, 30);
             txtPalavra.TabIndex = 0;
+            txtPalavra.UseSystemPasswordChar = true;
             // 
-            // label1
+            // lblDigitePalavra
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(25, 19);
-            label1.Name = "label1";
-            label1.Size = new Size(196, 23);
-            label1.TabIndex = 1;
-            label1.Text = "Digita uma Palavra";
+            lblDigitePalavra.AutoSize = true;
+            lblDigitePalavra.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblDigitePalavra.ForeColor = Color.White;
+            lblDigitePalavra.Location = new Point(25, 19);
+            lblDigitePalavra.Name = "lblDigitePalavra";
+            lblDigitePalavra.Size = new Size(155, 23);
+            lblDigitePalavra.TabIndex = 1;
+            lblDigitePalavra.Text = "Digita uma Palavra";
             // 
             // btnJogar
             // 
             btnJogar.BackColor = Color.Lime;
             btnJogar.FlatStyle = FlatStyle.Popup;
-            btnJogar.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnJogar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnJogar.ForeColor = Color.FromArgb(192, 255, 192);
-            btnJogar.Location = new Point(277, 35);
+            btnJogar.Location = new Point(311, 45);
             btnJogar.Name = "btnJogar";
             btnJogar.Size = new Size(101, 48);
-            btnJogar.TabIndex = 2;
+            btnJogar.TabIndex = 4;
             btnJogar.Text = "Jogar";
             btnJogar.UseVisualStyleBackColor = false;
             btnJogar.Click += btnJogar_Click;
@@ -103,96 +104,89 @@
             // cu
             // 
             cu.Image = Properties.Resources.black_cat;
-            cu.Location = new Point(384, 0);
+            cu.Location = new Point(347, 161);
             cu.Name = "cu";
             cu.Size = new Size(259, 314);
             cu.SizeMode = PictureBoxSizeMode.Zoom;
             cu.TabIndex = 3;
             cu.TabStop = false;
             // 
-            // label2
+            // lblTentativas
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(25, 82);
-            label2.Name = "label2";
-            label2.Size = new Size(113, 23);
-            label2.TabIndex = 5;
-            label2.Text = "Tentativas";
+            lblTentativas.AutoSize = true;
+            lblTentativas.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTentativas.ForeColor = Color.White;
+            lblTentativas.Location = new Point(25, 82);
+            lblTentativas.Name = "lblTentativas";
+            lblTentativas.Size = new Size(92, 23);
+            lblTentativas.TabIndex = 5;
+            lblTentativas.Text = "Tentativas";
             // 
             // txtTentativa
             // 
-            txtTentativa.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTentativa.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtTentativa.ForeColor = Color.Black;
             txtTentativa.Location = new Point(25, 108);
             txtTentativa.Name = "txtTentativa";
-            txtTentativa.Size = new Size(100, 27);
-            txtTentativa.TabIndex = 4;
+            txtTentativa.PlaceholderText = "Tentativas";
+            txtTentativa.Size = new Size(100, 30);
+            txtTentativa.TabIndex = 2;
             // 
             // lblPalavraCripto
             // 
             lblPalavraCripto.AutoSize = true;
-            lblPalavraCripto.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPalavraCripto.BackColor = Color.Transparent;
+            lblPalavraCripto.Font = new Font("Comic Sans MS", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblPalavraCripto.ForeColor = Color.White;
-            lblPalavraCripto.Location = new Point(25, 339);
+            lblPalavraCripto.Location = new Point(94, 35);
             lblPalavraCripto.Name = "lblPalavraCripto";
-            lblPalavraCripto.Size = new Size(154, 23);
+            lblPalavraCripto.Size = new Size(156, 30);
             lblPalavraCripto.TabIndex = 6;
             lblPalavraCripto.Text = "Palavra Cripto";
-            // 
-            // lblPalavraAcertos
-            // 
-            lblPalavraAcertos.AutoSize = true;
-            lblPalavraAcertos.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPalavraAcertos.ForeColor = Color.White;
-            lblPalavraAcertos.Location = new Point(25, 380);
-            lblPalavraAcertos.Name = "lblPalavraAcertos";
-            lblPalavraAcertos.Size = new Size(165, 23);
-            lblPalavraAcertos.TabIndex = 7;
-            lblPalavraAcertos.Text = "PalavraAcertos";
             // 
             // lblAcertouErrou
             // 
             lblAcertouErrou.AutoSize = true;
-            lblAcertouErrou.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAcertouErrou.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lblAcertouErrou.ForeColor = Color.White;
-            lblAcertouErrou.Location = new Point(25, 418);
+            lblAcertouErrou.Location = new Point(360, 150);
             lblAcertouErrou.Name = "lblAcertouErrou";
-            lblAcertouErrou.Size = new Size(152, 23);
+            lblAcertouErrou.Size = new Size(113, 23);
             lblAcertouErrou.TabIndex = 8;
             lblAcertouErrou.Text = "AcertouErrou";
+            lblAcertouErrou.Click += lblAcertouErrou_Click;
             // 
             // btnVerificar
             // 
             btnVerificar.BackColor = Color.FromArgb(0, 0, 192);
             btnVerificar.FlatStyle = FlatStyle.Popup;
-            btnVerificar.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnVerificar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnVerificar.ForeColor = Color.FromArgb(128, 128, 255);
-            btnVerificar.Location = new Point(131, 233);
+            btnVerificar.Location = new Point(152, 231);
             btnVerificar.Name = "btnVerificar";
             btnVerificar.Size = new Size(109, 48);
-            btnVerificar.TabIndex = 9;
+            btnVerificar.TabIndex = 10;
             btnVerificar.Text = "Verificar";
             btnVerificar.UseVisualStyleBackColor = false;
             btnVerificar.Click += btnVerificar_Click;
             // 
             // txtLetra
             // 
-            txtLetra.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLetra.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             txtLetra.ForeColor = Color.Black;
-            txtLetra.Location = new Point(25, 243);
+            txtLetra.Location = new Point(37, 241);
             txtLetra.Name = "txtLetra";
-            txtLetra.Size = new Size(100, 27);
-            txtLetra.TabIndex = 10;
+            txtLetra.PlaceholderText = "Letra";
+            txtLetra.Size = new Size(109, 30);
+            txtLetra.TabIndex = 9;
             // 
             // btnFechar
             // 
             btnFechar.BackColor = Color.Red;
             btnFechar.FlatStyle = FlatStyle.Popup;
-            btnFechar.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnFechar.Font = new Font("Comic Sans MS", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnFechar.ForeColor = Color.FromArgb(255, 128, 128);
-            btnFechar.Location = new Point(521, 503);
+            btnFechar.Location = new Point(84, 475);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(101, 48);
             btnFechar.TabIndex = 11;
@@ -200,21 +194,10 @@
             btnFechar.UseVisualStyleBackColor = false;
             btnFechar.Click += btnFechar_Click;
             // 
-            // lbLetra
-            // 
-            lbLetra.AutoSize = true;
-            lbLetra.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lbLetra.ForeColor = Color.White;
-            lbLetra.Location = new Point(28, 208);
-            lbLetra.Name = "lbLetra";
-            lbLetra.Size = new Size(63, 23);
-            lbLetra.TabIndex = 12;
-            lbLetra.Text = "Letra";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.joystick1;
-            pictureBox1.Location = new Point(432, 278);
+            pictureBox1.Location = new Point(395, 439);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(159, 106);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -321,6 +304,20 @@
             picheart10.TabIndex = 23;
             picheart10.TabStop = false;
             // 
+            // lblPalavraAcertos
+            // 
+            lblPalavraAcertos.AutoSize = true;
+            lblPalavraAcertos.BackColor = Color.Transparent;
+            lblPalavraAcertos.Font = new Font("Comic Sans MS", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblPalavraAcertos.ForeColor = Color.White;
+            lblPalavraAcertos.Location = new Point(94, 105);
+            lblPalavraAcertos.Name = "lblPalavraAcertos";
+            lblPalavraAcertos.RightToLeft = RightToLeft.No;
+            lblPalavraAcertos.Size = new Size(211, 38);
+            lblPalavraAcertos.TabIndex = 7;
+            lblPalavraAcertos.Text = "PalavraAcertos";
+            lblPalavraAcertos.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // Crypto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -338,18 +335,17 @@
             Controls.Add(picheart2);
             Controls.Add(picheart1);
             Controls.Add(pictureBox1);
-            Controls.Add(lbLetra);
             Controls.Add(btnFechar);
             Controls.Add(txtLetra);
             Controls.Add(btnVerificar);
             Controls.Add(lblAcertouErrou);
             Controls.Add(lblPalavraAcertos);
             Controls.Add(lblPalavraCripto);
-            Controls.Add(label2);
+            Controls.Add(lblTentativas);
             Controls.Add(txtTentativa);
             Controls.Add(cu);
             Controls.Add(btnJogar);
-            Controls.Add(label1);
+            Controls.Add(lblDigitePalavra);
             Controls.Add(txtPalavra);
             FormBorderStyle = FormBorderStyle.None;
             MinimizeBox = false;
@@ -376,18 +372,16 @@
         #endregion
 
         private TextBox txtPalavra;
-        private Label label1;
+        private Label lblDigitePalavra;
         private Button btnJogar;
         private PictureBox cu;
-        private Label label2;
+        private Label lblTentativas;
         private TextBox txtTentativa;
         private Label lblPalavraCripto;
-        private Label lblPalavraAcertos;
         private Label lblAcertouErrou;
         private Button btnVerificar;
         private TextBox txtLetra;
         private Button btnFechar;
-        private Label lbLetra;
         private PictureBox pictureBox1;
         private PictureBox picheart1;
         private PictureBox picheart2;
@@ -399,5 +393,6 @@
         private PictureBox picheart8;
         private PictureBox picheart9;
         private PictureBox picheart10;
+        private Label lblPalavraAcertos;
     }
 }
