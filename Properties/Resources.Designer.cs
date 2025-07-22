@@ -323,6 +323,16 @@ namespace CircodeAPPs.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rengar {
+            get {
+                object obj = ResourceManager.GetObject("rengar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap storm {
             get {
                 object obj = ResourceManager.GetObject("storm", resourceCulture);
